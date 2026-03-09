@@ -1,0 +1,20 @@
+import pandas as pd
+
+# Sample data
+data = {
+    'Timestamp': [
+        '2026-03-08 00:00','2026-03-08 01:00','2026-03-08 02:00',
+        '2026-03-08 03:00','2026-03-08 04:00'
+    ],
+    'Heart_Rate': [78, 85, 90, 110, 72],
+    'SpO2': [97, 95, 92, 88, 98],
+    'Temperature': [36.7, 36.9, 37.5, 38.2, 36.5],
+    'BP_Systolic': [120, 118, 130, 140, 115],
+    'BP_Diastolic': [80, 79, 85, 90, 78]
+    # DataFrame तयार करा
+df = pd.DataFrame(data)
+
+# CSV file मध्ये save करा
+df.to_csv('healthcare_dataset.csv', index=False)
+
+print("healthcare_dataset.csv file तयार झाली आहे.")
